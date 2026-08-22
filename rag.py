@@ -36,7 +36,7 @@ def embed(text):
 
 # Build the vector store 
 def build_vector_store(chunks):
-    client = chromadb.Client()  # in-memory, resets each run
+    client = chromadb.Client()  
     collection = client.create_collection(name="rag_collection")
 
     for i, chunk in enumerate(chunks):
